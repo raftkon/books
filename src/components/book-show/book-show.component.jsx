@@ -6,7 +6,6 @@ const BookShow = ({ book, onDelete, onEdit }) => {
   const [showEdit, setShowEdit] = useState(false);
 
   const handleDeleteClick = () => {
-    console.log("clicked");
     onDelete(book.id);
   };
 
@@ -14,8 +13,8 @@ const BookShow = ({ book, onDelete, onEdit }) => {
     setShowEdit(!showEdit);
   };
 
-  const handleSubmit = (edittedBook) => {
-    onEdit(edittedBook);
+  const handleSubmit = (id, title) => {
+    onEdit(id, title);
     setShowEdit((prevState) => !prevState);
   };
 

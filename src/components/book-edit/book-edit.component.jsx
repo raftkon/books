@@ -10,8 +10,7 @@ const BookEdit = ({ book, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const edittedBook = { id: book.id, title };
-    onSubmit(edittedBook);
+    onSubmit(book.id, title);
     setTitle("");
   };
 
